@@ -67,7 +67,7 @@ function setCalendar() {
         } else {
         restoredCalendarItem = JSON.parse(oldCalendarItem)}
         hourSection = $("<section>")
-        .addClass("row mx-1 mx-md-5 shadow")
+        .addClass("row mx-1 mx-md-5 shadow mb-1")
         hourDiv = $("<div>").text(dayCalendar[i].hour)
         .addClass("col-2 col-md-1  bg-dark text-light shadow ")
         eventDiv = $("<div>").text(restoredCalendarItem.event || "Enter event or task")
@@ -121,6 +121,7 @@ setCalendar();
 var update = function () {
     date = moment()
     datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+    datetime.addClass("text-success")
     //Refresh every hour for colors
     var currentMinutes = (date.format("mm:ss"))
     if (currentMinutes == "03:00") { 
