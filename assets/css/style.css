@@ -1,5 +1,6 @@
-section div {
+section div, input {
     width: 100%;
     height: 60px;
     padding: 1em 0;
+
 }
